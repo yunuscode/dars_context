@@ -1,22 +1,15 @@
-import './App.scss' 
-import { BrowserRouter, Route } from 'react-router-dom'
-import { useState, useContext } from 'react'
-import ThemeRoute from './routers/ThemeRoute'
-import FirstComponent from './components/FirstComponent'
-
-import ThemeContext from "./contexts/ThemeContext"
+import './style/App.scss' 
+import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom'
+import LoginComponent from './components/Login'
 
 export default function App () {
 
-    return (
-        <BrowserRouter>
-
-            <ThemeRoute>
-
-                    <Route path="/" component={FirstComponent} />
-
-            </ThemeRoute>
-
-        </BrowserRouter>
-    )
+   return (
+        <Router>
+            <Switch>
+                <Route exact path="/login" component={LoginComponent} />
+            </Switch>
+        </Router>
+   )
+   
 }
