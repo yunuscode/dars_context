@@ -1,14 +1,14 @@
 import { useContext } from "react"
-import AuthContext from "../contexts/AuthContext"
+import ThemeContext from "../contexts/ThemeContext"
 
 export default function FirstComponent() {
 
-    const { setAuth } = useContext(AuthContext)
+    const { dark, setDark } = useContext(ThemeContext)
 
 
     return (
         <>
-            <h1 onDoubleClick={e => setAuth(false)}>dunyo</h1>
+            <h1 onDoubleClick={e => setDark(!dark) }>dunyo</h1>
         </>
     )
 }
