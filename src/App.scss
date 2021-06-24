@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.countdown {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.countdown > * {
+    width: 20%;
+    display: block;
+}
+
+li {
+    border: 2px solid black;
+    margin: 20px 0;
+}
+
+@media (max-width: 500px) {
+    li {
+        border-color: red;
+    }
+}
+
+.nav__link {
+    color: green;
+
+    &__active {
+        color: red;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.add_user_button {
+    padding: 10px;
+}
